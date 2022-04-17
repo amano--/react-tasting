@@ -71,5 +71,24 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+
+  // json schema ベースの補完設定
+  // https://code.visualstudio.com/docs/languages/json#_mapping-in-the-user-settings
+  "json.schemas": [
+    {
+    // babelrc ファイルの補完
+      "fileMatch": [
+          "/.babelrc"
+      ],
+      "url": "https://json.schemastore.org/babelrc"
+    },
+    // rdra ファイルの補完
+    {
+      "fileMatch": [
+          "/apps/docs/design/rdra/rdra.yml"
+      ],
+      "url": "https://raw.githubusercontent.com/tango238/rdra/main/src/schema.json"
+    }
+  ]
 }
