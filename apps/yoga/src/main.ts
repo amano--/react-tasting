@@ -1,7 +1,7 @@
 import { execute, parse } from 'graphql'
 import { schema } from './schema'
 
-async function main() {
+export async function helloTest() {
   const myQuery = parse(/* GraphQL */ `
     query {
       hello
@@ -14,6 +14,7 @@ async function main() {
   })
 
   console.log(result)
+  return result
 }
 
-main()
+// main()
